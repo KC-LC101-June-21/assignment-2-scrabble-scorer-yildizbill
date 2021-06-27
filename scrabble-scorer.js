@@ -24,7 +24,7 @@ function oldScrabbleScorer(wrd){
     }
 
   }
-  console.log(letterPoints);
+  return letterPoints;
 };
 
 
