@@ -141,10 +141,11 @@ function transform(arr){
   let newObject = {};
   for(let properties of Object.entries(arr)){
     for(let items of properties[1]){
-      newObject[items] = parseInt(properties[0])
-
+      newObject[items.toLowerCase()] = parseInt(properties[0])
+      //console.log(newObject);
     }
   }
+  
   return newObject;
 
 };
