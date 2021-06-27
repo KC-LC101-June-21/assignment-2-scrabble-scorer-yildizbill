@@ -106,7 +106,6 @@ const scoringAlgorithms = [
   name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
   scorerFunction: scrabbleSocre,
-  scoringFunction: "function"
   scoringFunction: undefined
   }),
  
