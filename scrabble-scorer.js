@@ -90,21 +90,21 @@ const scoringAlgorithms = [
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
   scorerFunction: simpleScore,
-  scoringFunction: undefined
+  scoringFunction: "function"
   }),
 
   Object ({
   name: 'Bonus vowels',
   description: 'Vowels are 3 pts, consonants are 1 pt.',
   scorerFunction: vowelBonusScore,
-  scoringFunction: undefined
+  scoringFunction: "function"
   }),
 
   Object ({
   name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
   scorerFunction: scrabbleSocre,
-  scoringFunction: undefined
+  scoringFunction: "function"
   })
 
 ];
