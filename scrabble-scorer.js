@@ -66,6 +66,7 @@ function vowelBonusScore(wrds){
 
 };
 
+
 //uses old point structure
 let scrabbleSocre = function(wrd){
    wrd = wrd.toLowerCase();
