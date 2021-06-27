@@ -92,14 +92,14 @@ const scoringAlgorithms = [
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
   scorerFunction: simpleScore,
-  scoringFunction: "function"
+  scoringFunction: undefined
   }),
 
   Object ({
   name: 'Bonus vowels',
   description: 'Vowels are 3 pts, consonants are 1 pt.',
   scorerFunction: vowelBonusScore,
-  scoringFunction: "function"
+  scoringFunction: undefined
   }),
 
   Object ({
@@ -107,9 +107,9 @@ const scoringAlgorithms = [
   description: 'The traditional scoring algorithm.',
   scorerFunction: scrabbleSocre,
   scoringFunction: "function"
+  scoringFunction: undefined
   }),
-  Object({ scoringFunction: undefined })
-
+ 
 ];
 
 // we are letting user to choose one of the scoring algorithms
