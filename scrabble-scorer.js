@@ -32,13 +32,14 @@ function oldScrabbleScorer(wrd){
 function initialPrompt(){
 
   let answer = input.question('Please enter a valid word: ');
-  answer = answer.toUpperCase();
+  answer = answer.toLowerCase();
   return answer;
 
 };
 
 // word length giving us the total point
 function simpleScore(wrd){
+  wrd = wrd.toUpperCase();
   let count=0;
   for (const items in oldPointStructure) {
     for(let i=0; i<wrd.length; i++){
@@ -52,6 +53,7 @@ function simpleScore(wrd){
 
 //vowels get 3 point consonants get 1 point each
 function vowelBonusScore(wrds){
+  wrds = wrds.toUpperCase();
   let count = 0;
   for(let i=0; i<wrds.length; i++){
     if(vowels.includes(wrds[i])){
@@ -66,7 +68,7 @@ function vowelBonusScore(wrds){
 
 //uses old point structure
 let scrabbleSocre = function(wrd){
-   
+   wrd = wrd.toLowerCase();
   // for(let i=0; i<wrd.length; i++){
   //   for(numbers in oldPointStructure){
   //     if(oldPointStructure[numbers].includes(wrd[i])){
