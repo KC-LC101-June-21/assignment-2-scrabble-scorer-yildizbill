@@ -86,23 +86,26 @@ let scrabbleSocre = function(wrd){
 //whole scoring algorithms stored into an object
 const scoringAlgorithms = [
 
-  {
+  Object( {
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
-  scorerFunction: simpleScore
-  },
+  scorerFunction: simpleScore,
+  scoringFunction: undefined
+  }),
 
-  {
+  Object ({
   name: 'Bonus vowels',
   description: 'Vowels are 3 pts, consonants are 1 pt.',
-  scorerFunction: vowelBonusScore
-  },
+  scorerFunction: vowelBonusScore,
+  scoringFunction: undefined
+  }),
 
-  {
+  Object ({
   name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
-  scorerFunction: scrabbleSocre
-  }
+  scorerFunction: scrabbleSocre,
+  scoringFunction: undefined
+  })
 
 ];
 
