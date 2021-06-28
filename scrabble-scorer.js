@@ -92,7 +92,7 @@ const scoringAlgorithms = [
   Object( {
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
-  scoringFunction: simpleScore"
+  scoringFunction: simpleScore
   }),
 
   Object ({
