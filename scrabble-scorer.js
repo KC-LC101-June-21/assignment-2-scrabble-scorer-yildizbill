@@ -12,7 +12,7 @@ const oldPointStructure = {
 
 let vowels = ['A','E','I','O','U'];
 
-function oldScrabbleScorer(wrd){
+function oldScrabbleScore(wrd){
   let letterPoints = '';
 
   for(let i=0; i<wrd.length; i++){
@@ -154,7 +154,7 @@ let newPointStructure = transform(oldPointStructure);
 
 function runProgram(){
   let ourInput = initialPrompt();
-  oldScrabbleScorer(ourInput);
+  oldScrabbleScore(ourInput);
   scorerPrompt();
 };
 
