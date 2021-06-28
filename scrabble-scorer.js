@@ -86,23 +86,23 @@ function scrabbleSocre(wrd){
 //whole scoring algorithms stored into an object
 const scoringAlgorithms = [
 
-  Object( {
+  {
   name: 'Simple Score',
   description: 'Each letter is worth 1 point.',
   scoringFunction: simpleScore
-  }),
+  },
 
-  Object ({
+  {
   name: 'Bonus vowels',
   description: 'Vowels are 3 pts, consonants are 1 pt.',
   scoringFunction: vowelBonusScore
-  }),
+  },
 
-  Object ({
+  {
   name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
   scoringFunction: scrabbleSocre
-  }),
+  },
  
 ];
 
@@ -110,7 +110,6 @@ const scoringAlgorithms = [
 function scorerPrompt(){
 
   console.log(`scoringAlgorithms:\n 0) ${scoringAlgorithms[0].name}: Each letter worths 1 point. \n 1)${scoringAlgorithms[1].name}: Vowels worth 3 point each \n 2)${scoringAlgorithms[2].name}: Uses scrabble point system`);
-
 
   let usrInput = input.question('Please select one of the calculator: ');
   //usrInput = usrInput.toUpperCase();
@@ -161,7 +160,7 @@ module.exports = {
   oldPointStructure : oldPointStructure,
   simpleScore : simpleScore,
   vowelBonusScore : vowelBonusScore,
-  scrabbleSocre : scrabbleSocre,
+  scrabbleScore : scrabbleScore,
   scoringAlgorithms : scoringAlgorithms,
   newPointStructure : newPointStructure,
   runProgram : runProgram,
