@@ -65,7 +65,7 @@ function vowelBonusScore(wrds){
 
 
 //uses old point structure
-function scrabbleSocre(wrd){
+function scrabbleScore(wrd){
    wrd = wrd.toLowerCase();
   // for(let i=0; i<wrd.length; i++){
   //   for(numbers in oldPointStructure){
@@ -101,7 +101,7 @@ const scoringAlgorithms = [
   {
   name: 'Scrabble',
   description: 'The traditional scoring algorithm.',
-  scoringFunction: scrabbleSocre
+  scoringFunction: scrabbleScore
   },
  
 ];
