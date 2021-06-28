@@ -14,15 +14,12 @@ let vowels = ['A','E','I','O','U'];
 
 function oldScrabbleScore(wrd){
   let letterPoints = '';
-
   for(let i=0; i<wrd.length; i++){
     for(const pointValue in oldPointStructure){
       if(oldPointStructure[pointValue].includes(wrd[i])){
-              letterPoints += `Points for '${wrd[i]}': ${pointValue}\n`;
+        letterPoints += `Points for '${wrd[i]}': ${pointValue}\n`;
       }
-
     }
-
   }
   return letterPoints;
 };
@@ -44,7 +41,7 @@ function simpleScore(wrd){
   for (const items in oldPointStructure) {
     for(let i=0; i<wrd.length; i++){
        if (oldPointStructure[items].includes(wrd[i])){
-         count++;
+          count++;
         }
       }
     }
@@ -81,7 +78,7 @@ let scrabbleSocre = function(wrd){
   let newPoint=0;
   for(let item of wrd){
     newPoint+= Number(newPointStructure[item]);
-    //console.log(newPoint) just testing purposes
+    console.log(newPoint);
   }
   return newPoint;
 };
@@ -121,13 +118,13 @@ function scorerPrompt(){
 
   if(usrInput == 0){
     console.log('Algorithm name: '+scoringAlgorithms[0].name);
-    console.log('Scoring Algorithm result: '+scoringAlgorithms[0].scorerFunction(innerInput));
+    console.log('Scoring Algorithm result: '+scoringAlgorithms[0].scoringFunction(innerInput));
   }else if(usrInput == 1){
     console.log('Algorithm name: '+scoringAlgorithms[1].name);
-    console.log('Scoring Algorithm result: '+scoringAlgorithms[1].scorerFunction(innerInput));
+    console.log('Scoring Algorithm result: '+scoringAlgorithms[1].scoringFunction(innerInput));
   }else if(usrInput == 2){
     console.log('Algorithm name: '+scoringAlgorithms[2].name);
-    console.log('Scoring Algorithm result: '+scoringAlgorithms[2].scorerFunction(innerInput));
+    console.log('Scoring Algorithm result: '+scoringAlgorithms[2].scoringFunction(innerInput));
   }else{
     console.log('Please use number between 0 to 2');
   }
@@ -137,24 +134,23 @@ function scorerPrompt(){
 function transform(arr){
 
   let newObject = {};
-  for(let properties of Object.entries(arr)){
-    for(let items of properties[1]){
-      newObject[items.toLowerCase()] = Number(properties[0])
-      //console.log(newObject);
+  for(let x of Object.entries(arr)){
+    for(let i of x[1]){
+      newObject[i.toLowerCase()] = parseInt(x[0])
+      
     }
   }
-  
+  //console.log(newObject);
   return newObject;
-
 };
 
 
 let newPointStructure = transform(oldPointStructure);
-  //console.log(newPointStructure);
+//console.log(newPointStructure);
 
 function runProgram(){
-  let ourInput = initialPrompt();
-  oldScrabbleScore(ourInput);
+  //let ourInput = initialPrompt();
+  //oldScrabbleScore(ourInput);
   scorerPrompt();
 };
 
