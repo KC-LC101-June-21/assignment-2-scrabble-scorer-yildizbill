@@ -80,7 +80,7 @@ let scrabbleSocre = function(wrd){
   // return newPoint;
   let newPoint=0;
   for(let item of wrd){
-    newPoint+= newPointStructure[item];
+    newPoint+= Number(newPointStructure[item]);
     //console.log(newPoint) just testing purposes
   }
   return newPoint;
@@ -139,7 +139,7 @@ function transform(arr){
   let newObject = {};
   for(let properties of Object.entries(arr)){
     for(let items of properties[1]){
-      newObject[items.toLowerCase()] = parseInt(properties[0])
+      newObject[items.toLowerCase()] = Number(properties[0])
       //console.log(newObject);
     }
   }
