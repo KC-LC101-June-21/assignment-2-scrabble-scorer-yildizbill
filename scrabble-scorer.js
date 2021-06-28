@@ -65,7 +65,7 @@ function vowelBonusScore(wrds){
 
 
 //uses old point structure
-let scrabbleSocre = function(wrd){
+function scrabbleSocre(wrd){
    wrd = wrd.toLowerCase();
   // for(let i=0; i<wrd.length; i++){
   //   for(numbers in oldPointStructure){
@@ -78,7 +78,7 @@ let scrabbleSocre = function(wrd){
   let newPoint=0;
   for(let item of wrd){
     newPoint+= Number(newPointStructure[item]);
-    console.log(newPoint);
+    //console.log(newPoint);
   }
   return newPoint;
 };
